@@ -1,0 +1,305 @@
+Peanut allergy
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Appearance hide
+Text
+
+Small
+
+Standard
+
+Large
+Width
+
+Standard
+
+Wide
+Color (beta)
+
+Automatic
+
+Light
+
+Dark
+From Wikipedia, the free encyclopedia
+Globe icon.
+The examples and perspective in this article deal primarily with the United States and do not represent a worldwide view of the subject. You may improve this article, discuss the issue on the talk page, or create a new article, as appropriate. (April 2024) (Learn how and when to remove this message)
+Peanut allergy
+
+A peanut allergy warning
+Specialty	Emergency medicine
+Symptoms	Itchiness, hives, swelling, eczema, sneezing, asthma attack, abdominal pain, drop in blood pressure, diarrhea, cardiac arrest[1]
+Causes	Type I hypersensitivity[2]
+Risk factors	Childhood in developed countries[3][4]
+Diagnostic method	Medical history and physical examination by an approved doctor[2][5]
+Differential diagnosis	Tree nut allergy
+Prevention	Proper early introduction to peanuts and their products during pregnancy and infancy[6][3][7][8]
+Treatment	Epinephrine[2]
+Antihistamines (mild)[9][10]
+Frequency	1.4–2% (Europe and the United States)[11]
+Peanut allergy is a type of food allergy to peanuts. It is different from tree nut allergies, because peanuts are legumes and not true nuts. Physical symptoms of allergic reaction can include itchiness, hives, swelling, eczema, sneezing, asthma attack, abdominal pain, drop in blood pressure, diarrhea, and cardiac arrest.[1] Anaphylaxis may occur.[1] Those with a history of asthma are more likely to be severely affected.[1]
+
+It is due to a type I hypersensitivity reaction of the immune system in susceptible individuals.[2] The allergy is recognized "as one of the most severe food allergies due to its prevalence, persistency, and potential severity of allergic reaction."[1]
+
+Prevention may be partly achieved through early introduction of peanuts to the diets of pregnant women and babies.[8][6] It is recommended that babies at high risk be given peanut products in areas where medical care is available as early as 4 months of age.[12] The principal treatment for anaphylaxis is the injection of epinephrine.[2]
+
+A 2021 study found that prevalence of peanut allergy was 1.4–2% in Europe and the United States, increasing 3.5-fold over the past two decades.[11] Among children in the Western world, rates of peanut allergy are between approximately 1.5% and 3% and have increased over time.[13] It is a common cause of food-related fatal and near-fatal allergic reactions.[14]
+
+Signs and symptoms
+Signs and symptoms of anaphylaxis
+Most symptoms of peanut allergy are related to the action of immunoglobulin E (IgE)[15] and other anaphylatoxins which act to release histamine and other mediator substances from mast cells (degranulation). In addition to other effects, histamine induces vasodilation of arterioles and constriction of bronchioles in the lungs, also known as bronchospasm. Symptoms can also include mild itchiness, hives, angioedema, facial swelling, rhinitis, vomiting, diarrhea, acute abdominal pain, exacerbation of atopic eczema, asthma, and cardiac arrest.[1] Anaphylaxis may occur.[1][16]
+
+Cross-reactivity with other food allergies
+People with confirmed peanut allergy may have cross-reactivity to tree nut, soy, and other legumes, such as peas and lentils and lupinus.[17][18][19][20] The cause of cross-reactivity results from similarity in the structures of storage proteins between the food sources.[17] Allergenic proteins are grouped by protein families: cupins, prolamins, profilin and others. Peanuts and soybeans have proteins in the cupin, prolamin, and profilin families, while lentils contain cupin proteins.[17] Reviews of human clinical trials report that 6–40% of people with a confirmed peanut allergy will have allergic symptoms when challenged with tree nuts or legumes.[19][21]
+
+Causes
+Oral consumption is the most common route of exposure, but topical (skin) and inhalation can also trigger minor allergic reactions. There are at least 11 peanut proteins identified as allergenic.[22][23] The condition is associated with several specific proteins categorized according to four common food allergy superfamilies: Cupin (Ara h 1), Prolamin (Ara h 2, 6, 7, 9), Profilin (Ara h 5), and Bet v-1-related proteins (Ara h 8).[24] Among these peanut allergens, Ara h 1, Ara h 2, Ara h 3 and Ara h 6 are considered to be major allergens which means that they trigger an immunological response in more than 50% of the allergic population.[24] These peanut allergens mediate an immune response via release of Immunoglobulin E (IgE) antibody as part of the allergic reaction.[24]
+
+Some of the peanut allergens can undergo enzymatic and non-enzymatic modifications which makes them more likely to bind to ligands on antigen-presenting cells. Ara h 1 can undergo glycosylation modifications which have been shown to induce immunomodulatory responses; it stimulates lectin receptors MR and DC-SIGN on dendritic cells which further propagate cytokines and bias the immune system towards a Th2 type response.[24] Peanut proteins that undergo non-enzymatic changes through Maillard reactions when cooked or exposed to room temperature have an increase in AGE modifications on their structure.[24] These changes have been shown to stimulate RAGE receptors and SR-AI/II on dendritic cells and thus lead to an increase in IL-4 and IL-5-releasing Th2 cells.[citation needed]
+
+Peanut allergies are uncommon in children of undeveloped countries[3] where peanut products have been used to relieve malnutrition.[25] The hygiene hypothesis proposes that the relatively low incidence of childhood peanut allergies in undeveloped countries is a result of exposure to peanuts early in life, increasing immune capability.[3][4] A possibility of cross-reaction to soy was dismissed by an analysis finding no linkage to consumption of soy protein, and indicated that appearance of any linkage is likely due to preference to using soy milk among families with known milk allergies.[26]
+
+Desensitization through exposure
+In infants with a family history of peanut allergy, consuming peanut proteins at 4 to 11 months old has been shown to reduce the risk of developing an allergic response by 11–25%.[27] From these results, the American Academy of Pediatrics rescinded their recommendation to delay exposure to peanuts in children, also stating there is no reason to avoid peanuts during pregnancy or breastfeeding.[28][29] A later study by the National Institutes of Health provided further evidence supporting this. The study involved giving children diagnosed as "high allergic" small portions of peanut flour daily for several years, with some children randomly assigned placebo flour. The results were 71% of the children receiving peanut flour became desensitized to peanuts, while 2% receiving placebo flour became desensitized.[30]
+
+Diet during pregnancy
+There is conflicting evidence on whether maternal diet during pregnancy has any effect on development of allergies due to a lack of good studies.[31] A 2010 systematic review of clinical research indicated that there is insufficient evidence for whether maternal peanut exposure, or early consumption of peanuts by children, affects sensitivity for peanut allergy.[32]
+
+Routes of exposure
+
+Peanuts (Arachis hypogaea) - in shell, shell cracked open, shelled, peeled
+While the most obvious route for an allergic exposure is unintentional ingestion, some reactions are possible through external exposure. Peanut allergies are much more common in adults who had oozing and crusted skin rashes as infants.[33] Sensitive children may react via ingestion, inhalation, or skin contact to peanut allergens which have persistence in the environment, possibly lasting over months.[34]
+
+Airborne particles in a farm- or factory-scale shelling or crushing environment, or from cooking, can produce respiratory effects in exposed allergic individuals.[35] Empirical testing has discredited some reports of this type and shown some to be exaggerated. Residue on surfaces has been known to cause minor skin rashes, though not anaphylaxis. In The Peanut Allergy Answer Book, Harvard pediatrician Michael Young characterized this secondary contact risk to allergic individuals as rare and limited to minor symptoms.[36] Some reactions have been noted to be psychosomatic in nature, the result of conditioning, and belief rather than a true chemical reaction. Blinded, placebo-controlled studies were unable to produce any reactions using the odor of peanut butter or its mere proximity.[36]
+
+Rarely, allergic reactions have been triggered by exposure from kissing and sexual contact, especially if the partner has eaten peanuts within the last hour.[37] In 2005, a "kiss of death" was misreported as being due to peanut allergy; instead, the person died of an asthma attack after smoking.[38]
+
+Pathophysiology
+The allergy arises due to dendritic cells recognizing peanut allergens as foreign pathogens.[39] They present the antigens on MHC class II receptors and these antigens are recognized by cell receptors on T cells. The contact along with the release of the cytokine IL-4 induces their differentiation into CD4+ Th2 cells.[39] The Th2 cells proliferate and release pro-inflammatory cytokines, such as IL-4, IL-5, and IL-13, which can be bound to receptors on undifferentiated B cells or B cells of the IgM subtype.[39] The receptor-cytokine binding causes their differentiation into IgE which can then be bound onto FcεRI on mast cells, eosinophils and basophils.[39] This elicits degranulation of the aforementioned cells which release potent cytokines and chemokines, thus triggering inflammation and causing the symptoms characteristic of allergy.[39]
+
+Diagnosis
+Diagnosis of food allergies, including peanut allergy, begins with a medical history and physical examination.[2][5] National Institute of Allergy and Infectious Diseases (NIAID) guidelines recommend that parent and patient reports of food allergy be confirmed by a doctor because "multiple studies demonstrate 50% to 90% of presumed food allergies are not allergies."[5]
+
+Skin prick testing
+Skin prick tests can be used to confirm specific food allergies.[1][2][5] Skin prick tests are designed to identify specific IgE bound to cutaneous mast cells.[1] During the test, a glycerinated allergen extract drop is placed on the patient's skin.[2] The patient's skin is then pricked through the drop.[2] This procedure is repeated with two controls: a histamine drop designed to elicit an allergic response, and a saline drop designed to elicit no allergic response.[2] The wheal that develops from the glycerinated extract drop is compared against the saline control.[2] A positive allergic test is one in which the extract wheal is 3mm larger than the saline wheal.[2] A positive skin prick test is about 50% accurate, so a positive skin prick test alone is not diagnostic of food allergies.[1][2][5]
+
+Oral food challenge
+The "gold standard" of diagnostic tests is a double-blind placebo-controlled oral food challenge.[2][5] At least two weeks prior to an oral food challenge, the person is placed on an elimination diet where the suspected allergen is avoided.[40] During the oral food challenge, they are administered a full age-appropriate serving of a suspected allergen in escalating size increments.[40] They are continuously monitored for allergic reaction during the test, and the challenge is stopped and treatment administered at the first objective sign of allergic reaction.[40]
+
+Oral food challenges pose risks.[41] In a study of 584 oral food challenges administered to 382 patients, 48% (253) of challenges resulted in allergic reactions.[41] 28% (72) of these challenges resulted in "severe" reactions, which were defined by the study as a patient having: lower respiratory symptoms; cardiovascular symptoms; or any four other, more minor, symptoms.[41] Double-blind placebo-controlled oral food challenges are also time-consuming and require close medical supervision.[2] Because of these drawbacks to the double-blind placebo-controlled oral food challenge, open food challenges are the most commonly used form of food challenge.[40] Open food challenges are those in which a patient is fed an age-appropriate serving of a suspected food allergen in its natural form.[40] The observation of objective symptoms resulting from ingestion of the food, such as vomiting or wheezing, is considered diagnostic of food allergy if the symptoms correlate with findings from the patient's medical history and laboratory testing such as the skin prick test.[5]
+
+Prevention
+In 2017, the US National Institute of Allergy and Infectious Diseases published revised guidelines for lowering the risk or preventing peanut allergies by creating separate ways to assess childhood allergies and guide parents with infants at high, moderate or low risk.[42][43][7] The guidelines discussed how to introduce peanut foods to infants as early as 4 to 6 months of age, with the goal of preventing peanut allergy.[6][3][7]
+
+For high-risk children, the guide recommended that an allergy specialist assess a child's susceptibility, possibly involving peanut allergy testing, followed by gradual introduction of peanut foods under the supervision of an allergy specialist.[6][7] Peanut allergy is confirmed only if there is a history of reactions to peanut consumption and by a positive allergy test.[7] Moderate-risk children – who display an allergic reaction to peanut products with mild to moderate eczema – are typically not assessed in a clinic, but rather have peanut foods gradually provided to them at home by their parents, beginning at around age 6 months.[6][15][7] The Learning Early About Peanut Allergy (LEAP) study supported by NIAID established that early introduction of peanut products into a child's diet can prevent – rather than only delay – the development of childhood peanut allergies, and that the effect is beneficial and lifelong.[6][15][3]
+
+Treatment
+
+Epinephrine autoinjectors are portable single-dose epinephrine-dispensing devices used to treat anaphylaxis.
+Treatment for accidental ingestion of peanut products by allergic individuals varies depending on the sensitivity of the person. An antihistamine such as diphenhydramine may be prescribed. Sometimes prednisone will be prescribed to prevent a possible late phase Type I hypersensitivity reaction.[44] Severe allergic reactions (anaphalaxis) may require treatment with an epinephrine pen, which is an injection device designed to be used by a non-healthcare professional when emergency treatment is warranted.[45]
+
+As of 2021, there is no cure for peanut allergy other than strict avoidance of peanuts and peanut-containing foods.[46] Extra care is needed for food consumed at or purchased from restaurants.[2]
+
+Immunotherapy
+Immunotherapy involves attempts to reduce allergic sensitivity by repeated exposure to small amounts of peanut products.[47][48] Evidence as of 2019, however, has found that it increases rather than decreases the risk of serious allergies.[49] None of these are considered ready for use in people outside of carefully conducted trials.[50] A 2012 Cochrane Review concluded that more research was needed.[51] Sublingual immunotherapy involves putting gradually increasing doses of an allergy extract under a person's tongue.[50] The extract is then either spat or swallowed.[50] As of 2014, the evidence did not show that this was safe or effective.[50] Epicutaneous immunotherapy involves giving the allergen through a patch and has also been researched.[50]
+
+In September 2014, the U.S. Food and Drug Administration (FDA) granted fast track designation, and in June 2015, granted breakthrough therapy designation to AR101 for peanut allergy in ages 4–17.[52] AR101 was studied in the PALISADE international, multicenter, randomized, double-blind, placebo-controlled study.[53]
+
+In September 2019, the Allergenic Products Advisory Committee (APAC) of the Center for Biologics Evaluation and Research (CBER) voted to support the use of peanut allergen powder (Palforzia) for peanut allergy.[54][55][56] The price has not been set as of September 2019, but is proposed to be between US$3,000 and US$20,000 per year.[57]
+
+In January 2020, peanut allergen powder was approved in the United States to mitigate allergic reactions, including anaphylaxis, that may occur with accidental exposure to peanuts.[58] Treatment with peanut allergen powder may be initiated in individuals ages four through 17 years with a confirmed diagnosis of peanut allergy and may be continued in individuals four years of age and older.[58] Those who take peanut allergen powder must continue to avoid peanuts in their diets.[58]
+
+On 15 October 2020, the European Medicines Agency (EMA) issued a favourable opinion for Palforzia. This medicine will be available as an oral powder in capsules (0.5, 1, 10, 20 and 100 mg) and as an oral powder in sachets (300 mg).[59]
+
+Prognosis
+Peanut allergies tend to resolve in childhood less often than allergies to soy, milk, egg, and wheat.[60] Accordingly, re-evaluation of peanut allergy is recommended on a yearly basis for young children with favorable previous test results, and every few years or longer for older children and adults.[60] A 2001 study showed that peanut allergy is outgrown in 22% of cases for people aged 4 to 20 years.[61]
+
+Epidemiology
+The percentage of people with peanut allergies is approximately 0.6% in the United States.[42][62] In a 2008 study, self-reported incidence of peanut allergy was estimated to affect 1.4% of children the United States, triple the 0.4% rate found in a 1997 study.[63] In England, an estimated 4,000 people are newly diagnosed with peanut allergy every year, 25,700 having been diagnosed with peanut allergy at some point in their lives.[64]
+
+Peanut allergy is one of the most dangerous food allergies, and one of the least likely to be outgrown.[63] In Western countries, the incidence of peanut allergy is between 1.5% and 3%.[27] There has been a sudden increase in number of cases in the early 21st century.[27]
+
+It is one of the most common causes of food-related deaths.[14] A meta-analysis found that death due to overall food-induced anaphylaxis was 1.8 per million person-years in people having food allergies, with peanut as the most common allergen.[34] However, there are opinions that the measures taken in response to the threat may be an over-reaction out of proportion to the level of danger. Media sensationalism has been blamed for anxiety outweighing reality.[65]
+
+Frequency among adults and children is similar—around 1%—but one study showed self-reports of peanut allergy are on the rise in children in the United States.[66] The number of young children self-reporting the allergy doubled between 1997 and 2002.[67] Studies have found that self-reported rates of food allergies is higher than clinically observed rates of food allergies.[2] The rates in self-reported incidence of the allergy, previously thought to be rare, may not be correlated with medical data confirming the self-reported incidence.[68][69]
+
+Society and culture
+The high severity of peanut allergy reactions, as well as the increasing prevalence of peanut allergy in the Western world have led to widespread public attention. However, the perceived prevalence of food allergies in the public view is substantially higher than the actual prevalence of food allergies.[2] Because peanut allergy awareness has increased, there are impacts on the quality of life for children, their parents and their immediate caregivers.[70][71][72][73] In the United States, the Food Allergen Labeling and Consumer Protection Act of 2004 causes people to be reminded of allergy problems every time they handle a food package, and restaurants have added allergen warnings to menus. The Culinary Institute of America, a premier school for chef training, has courses in allergen-free cooking and a separate teaching kitchen.[74] School systems have protocols about what foods can be brought into the school. Despite all these precautions, people with serious allergies are aware that accidental exposure can still easily occur at other people's houses, at school or in restaurants.[75] Food fear has a significant impact on quality of life.[72][73] Finally, for children with allergies, their quality of life is also affected by actions of their peers. There is an increased occurrence of bullying, which can include threats or acts of deliberately being touched with foods they need to avoid or having their allergen-free food deliberately contaminated.[76]
+
+Labeling
+
+An example of a list of allergens in a food item
+In response to the risk that certain foods pose to those with food allergies, some countries have responded by instituting labeling laws that require food products to clearly inform consumers if their products contain major allergens or byproducts of major allergens among the ingredients intentionally added to foods. Nevertheless, there are no labeling laws to mandatory declare the presence of trace amounts in the final product as a consequence of cross-contamination, except in Brazil.[77][78]
+
+[79][80][81][82][83][84][excessive citations]
+
+Ingredients intentionally added
+In the United States, the Food Allergen Labeling and Consumer Protection Act of 2004 (FALCPA), which became effective 1 January 2006, requires companies to disclose on the label whether a packaged food product contains any of these eight major food allergens, added intentionally: cow's milk, peanuts, eggs, shellfish, fish, tree nuts, soy and wheat.[78] This list originated in 1999, from the World Health Organisation Codex Alimentarius Commission.[83] To meet FALCPA labeling requirements, if an ingredient is derived from one of the required-label allergens, then it must either have its "food sourced name" in parentheses, for example "Casein (milk)," or as an alternative, there must be a statement separate but adjacent to the ingredients list: "Contains milk" (and any other of the allergens with mandatory labeling).[78][80] The European Union requires listing for those eight major allergens plus molluscs, celery, mustard, lupin, sesame and sulfites.[79]
+
+FALCPA applies to packaged foods regulated by the US Food and Drug Administration (FDA), which does not include poultry, most meats, certain egg products, and most alcoholic beverages.[84] However, some meat, poultry, and egg processed products may contain allergenic ingredients. These products are regulated by the Food Safety and Inspection Service (FSIS), which requires that any ingredient be declared in the labeling only by its common or usual name. Neither the identification of the source of a specific ingredient in a parenthetical statement nor the use of statements to alert for the presence of specific ingredients, like "Contains: milk", are mandatory according to FSIS.[81][82] FALCPA also does not apply to food prepared in restaurants.[85][86] The EU Food Information for Consumers Regulation 1169/2011 – requires food businesses to provide allergy information on food sold unpackaged, for example, in catering outlets, deli counters, bakeries and sandwich bars.[87]
+
+In the United States, there is no federal mandate to address the presence of allergens in drug products. FALCPA does not apply to medicines nor to cosmetics.[88]
+
+Trace amounts as a result of cross-contamination
+The value of allergen labeling other than for intentional ingredients is controversial. This concerns labeling for ingredients present unintentionally as a consequence of cross-contact or cross-contamination at any point along the food chain (during raw material transportation, storage or handling, due to shared equipment for processing and packaging, etc.).[83][84] Experts in this field propose that if allergen labeling is to be useful to consumers, and healthcare professionals who advise and treat those consumers, ideally there should be agreement on which foods require labeling, threshold quantities below which labeling may be of no purpose, and validation of allergen detection methods to test and potentially recall foods that were deliberately or inadvertently contaminated.[89][90]
+
+Labeling regulations have been modified to provide for mandatory labeling of ingredients plus voluntary labeling, termed precautionary allergen labeling (PAL), also known as "may contain" statements, for possible, inadvertent, trace amount, cross-contamination during production.[83][91] PAL labeling can be confusing to consumers, especially as there can be many variations on the wording of the warning.[91][92] As of 2014 PAL is regulated only in Switzerland, Japan, Argentina, and South Africa. Argentina decided to prohibit precautionary allergen labeling since 2010, and instead puts the onus on the manufacturer to control the manufacturing process and label only those allergenic ingredients known to be in the products. South Africa does not permit the use of PAL, except when manufacturers demonstrate the potential presence of allergen due to cross-contamination through a documented risk assessment and despite adherence to Good Manufacturing Practice.[83] In Australia and New Zealand there is a recommendation that PAL be replaced by guidance from VITAL 2.0 (Vital Incidental Trace Allergen Labeling). A review identified "the eliciting dose for an allergic reaction in 1% of the population" as ED01. This threshold reference dose for foods (such as cow's milk, egg, peanut and other proteins) will provide food manufacturers with guidance for developing precautionary labeling and give consumers a better idea of might be accidentally in a food product beyond "may contain."[93][94] VITAL 2.0 was developed by the Allergen Bureau, a food industry sponsored, non-government organization.[95] The European Union has initiated a process to create labeling regulations for unintentional contamination but is not expected to publish such before 2024.[96]
+
+In Brazil, since April 2016, the declaration of the possibility of cross-contamination is mandatory when the product does not intentionally add any allergenic food or its derivatives, but the Good Manufacturing Practices and allergen control measures adopted are not sufficient to prevent the presence of accidental trace amounts. These allergens include wheat, rye, barley, oats and their hybrids, crustaceans, eggs, fish, peanuts, soybean, milk of all species of mammalians, almonds, hazelnuts, cashew nuts, Brazil nuts, macadamia nuts, walnuts, pecan nuts, pistachios, pine nuts, and chestnuts.[77]
+
+See also
+icon	Medicine portal
+Allergy
+Food allergy
+List of allergens
+Tree nut allergy
+References
+ Loza C, Brostoff J (1995). "Peanut allergy". Clin. Exp. Allergy. 25 (6): 493–502. doi:10.1111/j.1365-2222.1995.tb01086.x. PMID 7648456. S2CID 21003224.
+ Al-Muhsen S, Clarke AE, Kagan RS (2003). "Peanut allergy: an overview". CMAJ. 168 (10): 1279–1285. PMC 154188. PMID 12743075.
+ Fleischer DM (2017). "Life after LEAP: How to implement advice on introducing peanuts in early infancy". Journal of Paediatrics and Child Health. 53 (S1): 3–9. doi:10.1111/jpc.13491. PMID 28276109.
+ Dina Fine Maron (23 February 2015). "How Can Peanut Allergies Be Prevented?". Scientific American. Retrieved 23 October 2017.
+ Boyce JA, Assa'ad A, Burks AW, et al. (December 2010). "Guidelines for the Diagnosis and Management of Food Allergy in the United States: Summary of the NIAID-Sponsored Expert Panel Report". J. Allergy Clin. Immunol. 126 (6): 1105–18. doi:10.1016/j.jaci.2010.10.008. ISSN 0091-6749. PMC 4241958. PMID 21134568.
+ Togias A, Cooper SF, Acebal ML, et al. (2017). "Addendum guidelines for the prevention of peanut allergy in the United States: Report of the National Institute of Allergy and Infectious Diseases–sponsored expert panel". Journal of Allergy and Clinical Immunology. 139 (1): 29–44. doi:10.1016/j.jaci.2016.10.010. PMC 5226648. PMID 28065278.
+ "Peanut Allergy". American College of Allergy, Asthma and Immunology. 12 January 2015. Retrieved 10 April 2019.
+ Ierodiakonou D, Garcia-Larsen V, Logan A, et al. (20 September 2016). "Timing of Allergenic Food Introduction to the Infant Diet and Risk of Allergic or Autoimmune Disease: A Systematic Review and Meta-analysis". JAMA. 316 (11): 1181–1192. doi:10.1001/jama.2016.12623. hdl:10044/1/40479. PMID 27654604.
+ "Choosing Wisely: Don't rely on antihistamines as firstline treatment in severe allergic reactions". American Academy of Family Physicians. Retrieved 21 April 2021.
+ Fineman, SM (July 2014). "Optimal Treatment of Anaphylaxis: Antihistamines Versus Epinephrine". Postgraduate Medicine. 126 (4): 73–81. doi:10.3810/pgm.2014.07.2785. PMID 25141245. S2CID 25203272.
+ Lange L, et al. (28 September 2021). "White paper on peanut allergy – part 1: Epidemiology, burden of disease, health economic aspects". Allergo J Int. 30 (8): 261–269. doi:10.1007/s40629-021-00189-z. PMC 8477625. PMID 34603938.
+ Greer FR, Sicherer SH, Burks AW (2019). "The Effects of Early Nutritional Interventions on the Development of Atopic Disease in Infants and Children: The Role of Maternal Dietary Restriction, Breastfeeding, Hydrolyzed Formulas, and Timing of Introduction of Allergenic Complementary Foods". Pediatrics. 143 (4): e20190281. doi:10.1542/peds.2019-0281. ISSN 0031-4005. PMID 30886111.
+ Chen M, Welch M, Laubach S (March 2018). "Preventing Peanut Allergy". Pediatric Allergy, Immunology, and Pulmonology. 31 (1): 2–8. doi:10.1089/ped.2017.0826. PMC 5867507. PMID 29588872.
+ "Allergy Facts and Figures". Asthma and Allergy Foundation of America. 2017. Retrieved 16 November 2017.
+ "Identifying Causes of Food Allergy and Assessing Strategies for Prevention". National Institute of Allergy and Infectious Diseases, US National Institutes of Health. 26 October 2018. Retrieved 10 April 2019.
+ "Food Allergies and Intolerances" (PDF). British Dietetic Association. May 2015. Retrieved 16 November 2017.
+ Bublin M, Breiteneder H (2014). "Cross-Reactivity of Peanut Allergens". Current Allergy and Asthma Reports. 14 (4): 426. doi:10.1007/s11882-014-0426-8. PMC 3962743. PMID 24554241.
+ Lomas JM, Järvinen KM (2015). "Managing nut-induced anaphylaxis: challenges and solutions". J Asthma Allergy. 8: 115–123. doi:10.2147/JAA.S89121. PMC 4631427. PMID 26604803.
+ Cabanillas B, Jappe U, Novak N (2018). "Allergy to Peanut, Soybean, and Other Legumes: Recent Advances in Allergen Characterization, Stability to Processing and IgE Cross-Reactivity". Mol Nutr Food Res. 62 (1): 1700446. doi:10.1002/mnfr.201700446. PMID 28944625. S2CID 31423877.
+ Chan, Edmond (February 2019). "Managing Cross-Reactivity in Those with Peanut Allergy". The Journal of Allergy and Clinical Immunology: In Practice. 7 (2). U.S. Food and Drug Administration (FDA): 381–386. doi:10.1016/j.jaip.2018.11.012. PMID 30472327. S2CID 53772959. Retrieved 20 February 2020.
+ Bublin M, Breiteneder H (2014). "Developing therapies for peanut allergy". Int. Arch. Allergy Immunol. 165 (3): 179–194. doi:10.1159/000369340. PMC 5548240. PMID 25531161.
+ "Current and Emerging Immunotherapeutic Approaches to Treat and Prevent Peanut Allergy". Medscape. 2012. p. 3. Retrieved 6 March 2016.
+ Miller DS, Brown MP, Howley PM, et al. (December 2012). "Current and emerging immunotherapeutic approaches to treat and prevent peanut allergy". Expert Rev Vaccines. 11 (12): 1471–81. doi:10.1586/erv.12.119. ISSN 1476-0584. PMID 23252390. S2CID 207224787.
+ Mueller GA, Maleki SJ, Pedersen LC (2014). "The Molecular Basis of Peanut Allergy". Current Allergy and Asthma Reports. 14 (5): 429. doi:10.1007/s11882-014-0429-5. PMC 4785306. PMID 24633613.
+ Rice A (2 September 2010). "The Peanut Solution". The New York Times Magazine. Retrieved 2 September 2010.
+ Koplin J, Dharmage SC, Gurrin L, et al. (2008). "Soy consumption is not a risk factor for peanut sensitization". Journal of Allergy and Clinical Immunology. 121 (6): 1455–9. doi:10.1016/j.jaci.2008.03.017. PMID 18436294.
+ Fleischer DM, Sicherer S, Greenhawt M, et al. (January 2016). "Consensus Communication on Early Peanut Introduction and Prevention of Peanut Allergy in High-Risk Infants". Pediatric Dermatology. 33 (1): 103–106. doi:10.1111/pde.12685. PMID 26354148. S2CID 20106020.
+ Greer FR, Sicherer SH, Burks AW (2008). "Effects of Early Nutritional Interventions on the Development of Atopic Disease in Infants and Children: The Role of Maternal Dietary Restriction, Breastfeeding, Timing of Introduction of Complementary Foods, and Hydrolyzed Formulas". Pediatrics. 121 (1): 183–191. doi:10.1542/peds.2007-3022. PMID 18166574.
+ Lack G, Fox D, Northstone K, et al. (2003). "Factors associated with the development of peanut allergy in childhood". New England Journal of Medicine. 348 (11): 977–85. doi:10.1056/NEJMoa013536. PMID 12637607.
+ "Oral immunotherapy induces remission of peanut allergy in some young children". NIH. 20 January 2022. Retrieved 21 January 2022.
+ Chan ES, Cummings C, Canadian Paediatric Society, Community Paediatrics Committee and Allergy Section, et al. (December 2013). "Dietary exposures and allergy prevention in high-risk infants: A joint statement with the Canadian Society of Allergy and Clinical Immunology". Paediatrics & Child Health. 18 (10): 545–554. doi:10.1093/pch/18.10.545. PMC 3907352. PMID 24497783.
+ Thompson RL, Miles LM, Lunn J, et al. (2010). "Peanut sensitisation and allergy: influence of early life exposure to peanuts". British Journal of Nutrition. 103 (9): 1278–1286. doi:10.1017/S000711450999376X. PMID 20100372.
+ Foong RX, Brough H (October 2017). "The role of environmental exposure to peanut in the development of clinical allergy to peanut". Clin. Exp. Allergy. 47 (10): 1232–38. doi:10.1111/cea.12992. PMID 28779526. S2CID 10119958.
+ Turnbull JL, Adams HN, Gorard DA (January 2015). "Review article: The diagnosis and management of food allergy and food intolerances". Alimentary Pharmacology & Therapeutics. 41 (1): 3–25. doi:10.1111/apt.12984. PMID 25316115. S2CID 31761992.
+ Johnson, RM (February 2013). "Airborne concentrations of peanut protein". Allergy and Asthma Proceedings. 34 (1): 59–64. doi:10.2500/aap.2013.34.3622. PMID 23406937.
+ Young, Michael (2013). The Peanut Allergy Answer Book, 3rd Ed. Elsevier. p. 192. ISBN 978-15-923-3567-1.
+ Liccardi, Gennaro; Caminati, Marco; Senna, Gianenrico; Calzetta, Luigino; Rogliani, Paola (October 2017). "Anaphylaxis and intimate behaviour". Current Opinion in Allergy and Clinical Immunology. 17 (5): 350–355. doi:10.1097/ACI.0000000000000386. ISSN 1473-6322. PMID 28742538. S2CID 13925217.
+ Parikh, Rahul K. (5 February 2009). "The fear about peanut allergies is nuts". Salon. Retrieved 27 February 2021.
+ Benedé S, Blázquez AB, Chiang D, et al. (16 April 2016). "The rise of food allergy: Environmental factors and emerging treatments". eBioMedicine. 7: 27–34. doi:10.1016/j.ebiom.2016.04.012. ISSN 2352-3964. PMC 4909486. PMID 27322456.
+ Järvinen KM, Sicherer SH (September 2012). "Diagnostic oral food challenges: procedures and biomarkers". J. Immunol. Methods. 383 (1–2): 30–8. doi:10.1016/j.jim.2012.02.019. ISSN 0022-1759. PMID 22414488.
+ Perry TT, Matsui EC, Conover-Walker MK, et al. (November 2004). "Risk of oral food challenges". J. Allergy Clin. Immunol. 114 (5): 1164–8. doi:10.1016/j.jaci.2004.07.063. PMID 15536426.
+ "Addendum Guidelines for the Prevention of Peanut Allergy in the United States: Report of the NIAID-sponsored Expert Panel" (PDF). National Institute of Allergy and Infectious Diseases. 6 January 2017. Retrieved 16 November 2017.
+ "Guidelines for Clinicians and Patients for Diagnosis and Management of Food Allergy in the United States". National Institute of Allergy and Infectious Diseases, US National Institutes of Health. 24 October 2018. Retrieved 10 April 2019.
+ Tang AW (October 2003). "A practical guide to anaphylaxis". Am Fam Physician. 68 (7): 1325–32. PMID 14567487.
+ The EAACI Food Allergy and Anaphylaxis Guidelines Group (August 2014). "Anaphylaxis: guidelines from the European Academy of Allergy and Clinical Immunology". Allergy. 69 (8): 1026–45. doi:10.1111/all.12437. PMID 24909803. S2CID 11054771.
+ Anagnostou, A (11 June 2021). "Addressing Common Misconceptions in Food Allergy: A Review". Children. 8 (6). doi:10.3390/children8060497. PMC 8230601. PMID 34207962.
+ Anagnostou K, Islam S, King Y, et al. (April 2014). "Assessing the efficacy of oral immunotherapy for the desensitisation of peanut allergy in children (STOP II): a phase 2 randomised controlled trial". Lancet. 383 (9925): 1297–304. doi:10.1016/S0140-6736(13)62301-6. ISSN 0140-6736. PMC 4255069. PMID 24485709.
+ Begin P, Chinthrajah RS, Nadeau KC (2014). "Oral immunotherapy for the treatment of food allergy". Hum Vaccin Immunother. 10 (8): 2295–302. doi:10.4161/hv.29233. ISSN 2164-5515. PMC 4896783. PMID 25424935.
+ Chu DK, Wood RA, French S, et al. (April 2019). "Oral immunotherapy for peanut allergy (PACE): a systematic review and meta-analysis of efficacy and safety". The Lancet. 393 (10187): 2222–2232. doi:10.1016/S0140-6736(19)30420-9. PMID 31030987. S2CID 131777064.
+ Jones SM, Burks AW, Dupont C (February 2014). "State of the art on food allergen immunotherapy: oral, sublingual, and epicutaneous". The Journal of Allergy and Clinical Immunology. 133 (2): 318–23. doi:10.1016/j.jaci.2013.12.1040. PMID 24636471.
+ Nurmatov U, Venderbosch I, Devereux G, et al. (12 September 2012). "Allergen-specific oral immunotherapy for peanut allergy". The Cochrane Database of Systematic Reviews. 9 (9): CD009014. doi:10.1002/14651858.CD009014.pub2. PMID 22972130.
+ "Aimmune Therapeutics Submits BLA to FDA for AR101 for the Treatment of Peanut Allergy in Children and Adolescents Ages 4–17" (Press release). Aimmune Therapeutics. 21 December 2018. Retrieved 15 September 2019 – via Drugs.com.
+ PALISADE Group of Clinical Investigators, Vickery BP, Vereda A, Casale TB, Beyer K, et al. (November 2018). "AR101 Oral Immunotherapy for Peanut Allergy". N. Engl. J. Med. 379 (21): 1991–2001. doi:10.1056/nejmoa1812856. ISSN 0028-4793. PMID 30449234.
+ "Allergenic Products Advisory Committee September 13, 2019 Meeting Announcement – 09/13/2019 – 09/13/2019". U.S. Food and Drug Administration (FDA). 13 September 2019. Retrieved 15 September 2019.
+ "FDA Allergenic Products Advisory Committee Votes to Support the Use of Aimmune's Palforzia (AR101) for Peanut Allergy". Drugs.com. 13 September 2019. Retrieved 14 September 2019.
+ Hamblin J (13 September 2019). "The U.S. Health-Care System Found a Way to Make Peanuts Cost $4,200". The Atlantic. Retrieved 14 September 2019.
+ "First peanut allergy therapy gets backing from U.S. regulators' expert advisers". Reuters. 13 September 2019. Retrieved 1 October 2019.
+ "FDA approves first drug for treatment of peanut allergy for children". US Food and Drug Administration (Press release). 31 January 2020. Retrieved 31 January 2020. Public Domain This article incorporates text from this source, which is in the public domain.
+ "Palforzia, defatted powder of Arachis hypogaea L., semen (peanuts)". www.ema.europa.eu. European Medicines Agency. 13 October 2020. Retrieved 4 January 2021.
+ Sampson HA, Aceves S, Bock SA, et al. (November 2014). "Food allergy: a practice parameter update-2014". The Journal of Allergy and Clinical Immunology. 134 (5): 1016–25.e43. doi:10.1016/j.jaci.2014.05.013. PMID 25174862.
+ Skolnick, Helen S.; Conover-Walker, Mary Kay; Koerner, Celide Barnes; Sampson, Hugh A.; Burks, Wesley; Wood, Robert A. (2001). "The natural history of peanut allergy". Journal of Allergy and Clinical Immunology. 107 (2): 367–374. doi:10.1067/mai.2001.112129. ISSN 0091-6749. PMID 11174206.
+ Boyce JA, Assa'ad A, Burks AW, Jones SM, Sampson HA, et al. (December 2010). "Guidelines for the diagnosis and management of food allergy in the United States: report of the NIAID-sponsored expert panel". J. Allergy Clin. Immunol. 126 (6 Suppl): S1–58. doi:10.1016/j.jaci.2010.10.007. PMC 4241964. PMID 21134576.
+ "Peanut Allergies in Kids on the Rise". WebMD. Retrieved 29 December 2013.
+ Kotz D, Simpson CR, Sheikh A (2011). "Incidence, prevalence, and trends of general practitioner–recorded diagnosis of peanut allergy in England, 2001 to 2005". Journal of Allergy and Clinical Immunology. 127 (3): 623–630.e1. doi:10.1016/j.jaci.2010.11.021. PMID 21236479.
+ Colver A (2006). "Are the dangers of childhood food allergy exaggerated?". BMJ. 333 (7566): 494–496. doi:10.1136/bmj.333.7566.494. PMC 1557974. PMID 16946341.
+ Sicherer SH, Muñoz-Furlong A, Sampson HA (December 2003). "Prevalence of peanut and tree nut allergy in the United States determined by means of a random digit dial telephone survey: a 5-year follow-up study". The Journal of Allergy and Clinical Immunology. 112 (6): 1203–1207. doi:10.1016/s0091-6749(03)02026-8. PMID 14657884.
+ Burks AW (2008). "Peanut allergy". The Lancet. 371 (9623): 1538–1546. doi:10.1016/S0140-6736(08)60659-5. PMID 18456104. S2CID 24642732.
+ Hotchkiss M (25 July 2013). "Princeton researcher digs into the contested peanut-allergy epidemic". Princeton University. Retrieved 9 January 2014.
+ Waggoner MR (August 2013). "Parsing the peanut panic: The social life of a contested food allergy epidemic". Social Science & Medicine. 90: 49–55. doi:10.1016/j.socscimed.2013.04.031. PMC 3700803. PMID 23746608.
+ Ravid NL, Annunziato RA, Ambrose MA, et al. (2015). "Mental health and quality-of-life concerns related to the burden of food allergy". Psychiatr. Clin. North Am. 38 (1): 77–89. doi:10.1016/j.psc.2014.11.004. PMID 25725570.
+ Morou Z, Tatsioni A, Dimoliatis ID, et al. (2014). "Health-related quality of life in children with food allergy and their parents: a systematic review of the literature". J Investig Allergol Clin Immunol. 24 (6): 382–395. PMID 25668890.
+ Lange L (2014). "Quality of life in the setting of anaphylaxis and food allergy". Allergo J Int. 23 (7): 252–260. doi:10.1007/s40629-014-0029-x. PMC 4479473. PMID 26120535.
+ van der Velde JL, Dubois AE, Flokstra-de Blok BM (2013). "Food allergy and quality of life: what have we learned?". Curr Allergy Asthma Rep. 13 (6): 651–661. doi:10.1007/s11882-013-0391-7. PMID 24122150. S2CID 326837.
+ Culinary Institute of America Allergen-free oasis comes to the CIA (2017)
+ Shah E, Pongracic J (2008). "Food-induced anaphylaxis: who, what, why, and where?". Pediatr Ann. 37 (8): 536–541. doi:10.3928/00904481-20080801-06. PMID 18751571.
+ Fong AT, Katelaris CH, Wainstein B (2017). "Bullying and quality of life in children and adolescents with food allergy". J Paediatr Child Health. 53 (7): 630–635. doi:10.1111/jpc.13570. PMID 28608485. S2CID 9719096.
+ "Agência Nacional de Vigilância Sanitária Guia sobre Programa de Controle de Alergênicos" (in Portuguese). Agência Nacional de Vigilância Sanitária (ANVISA). 2016. Archived from the original on 29 April 2018. Retrieved 7 April 2018.
+ "Food Allergen Labeling and Consumer Protection Act of 2004". US Food and Drug Administration. 2 August 2004. Retrieved 7 March 2022.
+ "Food allergen labelling and information requirements under the EU Food Information for Consumers Regulation No. 1169/2011: Technical Guidance" Archived 7 July 2017 at the Wayback Machine (April 2015).
+ "Have Food Allergies? Read the Label". U.S. Food and Drug Administration (FDA). 11 May 2011. Retrieved 14 January 2018.
+ "Food Ingredients of Public Health Concern" (PDF). United States Department of Agriculture. Food Safety and Inspection Service. 7 March 2017. Retrieved 16 February 2018.
+ "Allergies and Food Safety". United States Department of Agriculture. Food Safety and Inspection Service. 1 December 2016. Retrieved 16 February 2018.
+ Allen KJ, Turner PJ, Pawankar R, et al. (2014). "Precautionary labelling of foods for allergen content: are we ready for a global framework?". World Allergy Organ J. 7 (1): 1–14. doi:10.1186/1939-4551-7-10. PMC 4005619. PMID 24791183.
+ "Food Allergies: What You Need to Know". U.S. Food and Drug Administration (FDA). 18 December 2017. Retrieved 12 January 2018.
+ Roses JB (2011). "Food allergen law and the Food Allergen Labeling and Consumer Protection Act of 2004: falling short of true protection for food allergy sufferers". Food Drug Law J. 66 (2): 225–42, ii. PMID 24505841.
+ "Food Allergen Labeling And Consumer Protection Act of 2004 Questions and Answers". U.S. Food and Drug Administration (FDA). 18 July 2006. Retrieved 12 March 2018.
+ "Allergy and intolerance: guidance for businesses". Archived from the original on 8 December 2014. Retrieved 12 December 2014.
+ Shah AV, Serajuddin AT, Mangione RA (2017). "Making All Medications Gluten Free". J Pharm Sci. 107 (5): 1263–1268. doi:10.1016/j.xphs.2017.12.021. PMID 29287928.
+ Mills EN, Valovirta E, Madsen C, et al. (2004). "Information provision for allergic consumers—where are we going with food allergen labelling?". Allergy. 59 (12): 1262–1268. doi:10.1111/j.1398-9995.2004.00720.x. PMID 15507093. S2CID 40395908.
+ Taylor SL, Baumert JL (2015). "Worldwide food allergy labeling and detection of allergens in processed foods". Food Allergy: Molecular Basis and Clinical Practice. Chemical Immunology and Allergy. Vol. 101. pp. 227–234. doi:10.1159/000373910. ISBN 978-3-318-02340-4. PMID 26022883. {{cite book}}: |journal= ignored (help)
+ DunnGalvin A, Chan CH, et al. (2015). "Precautionary allergen labelling: perspectives from key stakeholder groups". Allergy. 70 (9): 1039–1051. doi:10.1111/all.12614. PMID 25808296. S2CID 18362869.
+ Zurzolo GA, de Courten M, Koplin J, et al. (2016). "Is advising food allergic patients to avoid food with precautionary allergen labelling out of date?". Curr Opin Allergy Clin Immunol. 16 (3): 272–277. doi:10.1097/ACI.0000000000000262. PMID 26981748. S2CID 21326926.
+ Allen KJ, Remington BC, Baumert JL, et al. (2014). "Allergen reference doses for precautionary labeling (VITAL 2.0): clinical implications". J. Allergy Clin. Immunol. 133 (1): 156–164. doi:10.1016/j.jaci.2013.06.042. PMID 23987796.
+ Taylor SL, Baumert JL, Kruizinga AG, et al. (2014). "Establishment of Reference Doses for residues of allergenic foods: report of the VITAL Expert Panel". Food Chem. Toxicol. 63: 9–17. doi:10.1016/j.fct.2013.10.032. PMID 24184597.
+ The VITAL Program Allergen Bureau, Australia and New Zealand.
+ Popping B, Diaz-Amigo C (2018). "European Regulations for Labeling Requirements for Food Allergens and Substances Causing Intolerances: History and Future". J AOAC Int. 101 (1): 2–7. doi:10.5740/jaoacint.17-0381. PMID 29202901.
+Further reading
+Leickly, Frederick E.; Kloepfer, Kirsten M.; Slaven, James E.; et al. (2018). "Peanut Allergy: An Epidemiologic Analysis of a Large Database". The Journal of Pediatrics. 192: 223–228.e1. doi:10.1016/j.jpeds.2017.09.026. ISSN 0022-3476. PMID 29246346.</ref>
+External links
+"Peanut allergy". Drug Information Portal. U.S. National Library of Medicine.
+Classification	
+D
+ICD-10: T78.0, T78.1, L23.6, L27.2, Z91.0ICD-9-CM: 995.61, V15.01MeSH: D021183DiseasesDB: 29154
+vte
+Allergic conditions
+vte
+Hypersensitivity and autoimmune diseases
+Type I/allergy/atopy
+(IgE)	
+Foreign	
+Allergic asthmaAllergic urticariaAllergic rhinitis (Hay fever)AnaphylaxisAtopic dermatitisFood allergy common allergies include: EggMilkPeanutSeafoodSoyTree nutWheatPenicillin allergy
+Autoimmune	
+Autoimmune urticariaEosinophilic esophagitis
+Type II/ADCC
+IgGIgM
+Foreign	
+Hemolytic disease of the newborn
+Autoimmune	
+Cytotoxic	
+Autoimmune hemolytic anemiaBullous pemphigoidGoodpasture syndromeGuillain–Barré syndromeImmune thrombocytopenic purpuraPemphigus vulgarisRheumatic fever
+"Type V"/receptor	
+Graves' diseaseMyasthenia gravisPernicious anemia
+Type III
+(Immune complex)	
+Foreign	
+Arthus reactionFarmer's lungHenoch–Schönlein purpuraHypersensitivity vasculitisPost-streptococcal glomerulonephritisReactive arthritisSerum sickness
+Autoimmune	
+LupusRheumatoid arthritisSubacute bacterial endocarditis
+Type IV/cell-mediated
+(T cells)	
+Foreign	
+Allergic contact dermatitisMantoux test
+Autoimmune	
+Coeliac diseaseGiant cell arteritisHashimoto's thyroiditisMultiple sclerosisPostorgasmic illness syndromeReactive arthritisType 1 diabetes
+GVHD	
+Transfusion-associated graft-versus-host disease
+Unknown/
+multiple	
+Foreign	
+Hypersensitivity pneumonitis Allergic bronchopulmonary aspergillosisLatex allergy (I+IV)Transplant rejection
+Autoimmune	
+Autoimmune adrenalitisAutoimmune hepatitisAutoimmune polyendocrine syndrome APS1APS2Sjögren syndromeSystemic autoimmune disease
+Categories: Food allergiesPeanuts
