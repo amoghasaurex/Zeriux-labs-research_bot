@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Batman</title>
+</head>
+<body>
+    <h1>Chatbot - Upload a PDF or Text File</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload a text or PDF file:</label><br>
+        <input type="file" name="file" id="file" accept=".txt, .pdf" required><br><br>
+        <input type="submit" value="Upload and Chat">
+    </form>
+</body>
+</html>

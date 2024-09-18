@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with AI</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Chat with AI</h1>
+    <div id="chatbox">
+        <p><strong>AI:</strong> Ask me anything about the uploaded document.</p>
+    </div>
+    <input id="userInput" type="text" placeholder="Type your message here">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            var userInput = $("#userInput").val();
+            var tokens = {{ tokens|tojson }};
+            if (userInput) {
+                $("#chatbox").append("<p><strong>You:</strong> " + userInput + "</p>");
+                $.post("/get_response", { msg: userInput, 'tokens[]': tokens }).done(function(response) {
+                    $("#chatbox").append("<p><strong>AI:</strong> " + response + "</p>");
+                });
+                $("#userInput").val("");
+            }
+        }
+    </script>
+</body>
+</html>

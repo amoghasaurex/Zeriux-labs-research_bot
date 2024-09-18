@@ -1,141 +1,109 @@
-# Importing All The Modules
-
+import os
+from flask import Flask, render_template, request, redirect, url_for
 import numpy as np
 import nltk
-import torch.nn.functional as F
 import string
 import random
 import PyPDF2
+from werkzeug.utils import secure_filename
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from transformers import BertTokenizer, BertModel
-import torch
-import os
 
+# Initialize Flask app
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = 'uploads'
+ALLOWED_EXTENSIONS = {'pdf', 'txt'}
 
-# Loading Bert Model And Tokenizer
+# Create uploads folder if it doesn't exist
+if not os.path.exists(app.config['UPLOAD_FOLDER']):
+    os.makedirs(app.config['UPLOAD_FOLDER'])
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = BertModel.from_pretrained('bert-base-uncased')
-
-
-# Function to load and read PDF or Text File
-
-def load_document(file_path):
-    if file_path.endswith('.pdf'):
-        return read_pdf(file_path)
-    elif file_path.endswith('.txt'):
-        with open(file_path, 'r', errors='ignore') as file:
-            return file.read()
-    else:
-        return "Unsupported file format"
-
-def read_pdf(file_path):
-    with open(file_path, 'rb') as file:
-        reader = PyPDF2.PdfReader(file)
-        text = ''
-        for page in range(len(reader.pages)):
-            text += reader.pages[page].extract_text()
-        return text
-    
-
-# Load and process the document
-
-file_path = input("Please enter the file path for the PDF or text file: ")
-raw_doc = load_document(file_path).lower()
-
+# Download necessary nltk resources
 nltk.download('punkt')
 nltk.download('wordnet')
-nltk.download('punkt_tab')
-sent_tokens = nltk.sent_tokenize(raw_doc)
-word_tokens = nltk.word_tokenize(raw_doc)
+nltk.download('stopwords')
 
-
-# Text Processing
-
+# Stop words
+stop_words = set(nltk.corpus.stopwords.words('english'))
 lemmer = nltk.stem.WordNetLemmatizer()
+
+# Remove punctuation
 remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
 
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+# Lemmatize tokens and normalize text
 def LemTokens(tokens):
-    return [lemmer.lemmatize(token) for token in tokens]
+    return [lemmer.lemmatize(token) for token in tokens if token not in stop_words]
 
 def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
+# Function to extract text from uploaded files
+def extract_text_from_file(file_path):
+    if file_path.endswith(".pdf"):
+        with open(file_path, 'rb') as file:
+            pdf_reader = PyPDF2.PdfReader(file)
+            text = ''
+            for page_num in range(len(pdf_reader.pages)):
+                page = pdf_reader.pages[page_num]
+                text += page.extract_text()
+        return text
+    elif file_path.endswith(".txt"):
+        with open(file_path, 'r', errors='ignore') as file:
+            return file.read()
 
-# BERT-based Embedding Function
-
-def get_bert_embedding(text):
-    tokens = tokenizer(text, return_tensors='pt')
-    with torch.no_grad():
-        outputs = model(**tokens)
-    return outputs.last_hidden_state.mean(dim=1).squeeze()
-
-
-# Defining the Greeting Function
-
-GREET_INPUTS = ("hello", "hi", "greetings", "sup", "whats up", "hey", "was good", "my chigga")
-GREET_RESPONSES = ["hi", "hey", "ur mom :D", "*nods*", "was sup my chigga", "hi there", "AMOGH IS THE ONLY BATMAN", "yo i am cool ur not now tell me what you want"]
-
-def greet(sentence):
-    for word in sentence.split():
-        if word.lower() in GREET_INPUTS:
-            return random.choice(GREET_RESPONSES)
-
-
-# Response Generation using BERT and Cosine Similarity
-
-def response(user_response):
-    robo1_response = ''
-    user_embedding = get_bert_embedding(user_response)
-
-    # Calculate similarities and debug print them
-    similarities = []
-    for sent in sent_tokens:
-        sent_embedding = get_bert_embedding(sent)
-        similarity = F.cosine_similarity(user_embedding.unsqueeze(0), sent_embedding.unsqueeze(0), dim=1).item()
-        similarities.append(similarity)
-
-    # Debug: Print similarity scores to understand the behavior
-    for i, (sent, sim) in enumerate(zip(sent_tokens, similarities)):
-        print(f"Sentence {i}: {sent} | Similarity: {sim}")
-
-    # Find the best match
-    idx = torch.argmax(torch.tensor(similarities))
-    max_similarity = similarities[idx]
-
-    # Debug: Print the best match sentence and its similarity
-    print(f"Best match sentence: {sent_tokens[idx]} | Similarity: {max_similarity}")
-
-    # Set a threshold for acceptable similarity
-    threshold = 0.5  # Adjust as needed
-
-    if max_similarity < threshold:
-        robo1_response = "I'm not sure how to answer that. Could you please clarify?"
+# Chatbot logic
+def response(user_response, sent_tokens):
+    robo_response = ''
+    TfidVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
+    tfidf = TfidVec.fit_transform(sent_tokens)
+    
+    vals = cosine_similarity(tfidf[-1], tfidf)
+    idx = vals.argsort()[0][-2]
+    
+    flat = vals.flatten()
+    flat.sort()
+    req_tfidf = flat[-2]
+    
+    if req_tfidf == 0:
+        robo_response = "I don't understand what you're saying."
     else:
-        robo1_response = sent_tokens[idx]
+        robo_response = sent_tokens[idx]
+    return robo_response
 
-    return robo1_response
+# Homepage
+@app.route("/")
+def home():
+    return render_template("index.html")
 
+# Handle file upload and start chatbot
+@app.route("/upload", methods=["POST"])
+def upload_file():
+    if 'file' not in request.files:
+        return redirect(request.url)
+    file = request.files['file']
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
+        
+        # Extract text from the uploaded file
+        extracted_text = extract_text_from_file(file_path)
+        sent_tokens = nltk.sent_tokenize(extracted_text)
+        
+        return render_template("chat.html", tokens=sent_tokens)
+    return redirect("/")
 
-# Conversation Loop
+# Handle user questions
+@app.route("/get_response", methods=["POST"])
+def get_response():
+    user_input = request.form['msg']
+    sent_tokens = request.form.getlist('tokens[]')
+    sent_tokens.append(user_input)  # Add the user input to the sentence tokens
+    chatbot_response = response(user_input, sent_tokens)
+    return chatbot_response
 
-flag = True
-print("UR MOM: I am ur mom. I will give u a chance to talk, if you want to exit say the phrase *amma what did i do*")
-while flag:
-    user_response = input().lower()
-    if user_response != "amma what did i do":
-        if user_response == "thanks":
-            flag = False
-            print("UR MOM: You are welcome, my child. I love you.")
-        else:
-            if greet(user_response) is not None:
-                print("UR MOM: " + greet(user_response))
-            else:
-                sent_tokens.append(user_response)
-                print("UR MOM: ", end="")
-                print(response(user_response))
-                sent_tokens.remove(user_response)
-    else:
-        flag = False
-        print("UR MOM: You are welcome, my child. I love you, take care <3 *blowing kisses*")
+if __name__ == "__main__":
+    app.run(debug=True)
