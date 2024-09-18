@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, jsonify
 import numpy as np
 import nltk
 import string
@@ -12,6 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # Initialize Flask app
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # Set max file size to 50MB
 ALLOWED_EXTENSIONS = {'pdf', 'txt'}
 
 # Create uploads folder if it doesn't exist
@@ -57,6 +58,7 @@ def extract_text_from_file(file_path):
 # Chatbot logic
 def response(user_response, sent_tokens):
     robo_response = ''
+    sent_tokens.append(user_response)
     TfidVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
     tfidf = TfidVec.fit_transform(sent_tokens)
     
@@ -71,18 +73,20 @@ def response(user_response, sent_tokens):
         robo_response = "I don't understand what you're saying."
     else:
         robo_response = sent_tokens[idx]
+    
+    sent_tokens.remove(user_response)
     return robo_response
 
-# Homepage
+# Homepage with integrated file upload and chat
 @app.route("/")
 def home():
     return render_template("index.html")
 
-# Handle file upload and start chatbot
+# Handle file upload and extract text for chatbot
 @app.route("/upload", methods=["POST"])
 def upload_file():
     if 'file' not in request.files:
-        return redirect(request.url)
+        return jsonify({"error": "No file uploaded"})
     file = request.files['file']
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
@@ -93,15 +97,14 @@ def upload_file():
         extracted_text = extract_text_from_file(file_path)
         sent_tokens = nltk.sent_tokenize(extracted_text)
         
-        return render_template("chat.html", tokens=sent_tokens)
-    return redirect("/")
+        return jsonify({"tokens": sent_tokens})
+    return jsonify({"error": "Invalid file type. Please upload a .pdf or .txt file."})
 
-# Handle user questions
+# Handle user input and generate a response
 @app.route("/get_response", methods=["POST"])
 def get_response():
     user_input = request.form['msg']
     sent_tokens = request.form.getlist('tokens[]')
-    sent_tokens.append(user_input)  # Add the user input to the sentence tokens
     chatbot_response = response(user_input, sent_tokens)
     return chatbot_response
 
