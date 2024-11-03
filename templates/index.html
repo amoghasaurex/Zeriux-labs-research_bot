@@ -42,9 +42,26 @@
             text-align: center;
             color: white;
         }
+        /* Logout button styling */
+        .logout-btn {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .logout-btn a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Logout button/link -->
+    <div class="logout-btn">
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
     <h1 style="text-align: center;">Chat with Batman</h1>
     
     <div class="file-upload" style="text-align: center;">
