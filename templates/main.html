@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
+    <title>Batman Chatbot</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin-top: 20px; }
         .hidden { display: none; }
-        .container { max-width: 300px; margin: auto; }
+        .container { max-width: 600px; margin: auto; }
         .error { color: red; }
+        #chat-output { max-height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Flask App</h1>
+        <h1> BATMAN </h1>
 
-        <!-- Index (Home) Section -->
-        <div id="home-section" class="hidden">
-            <h2>Welcome to the Home Page</h2>
-            <p id="welcome-message"></p>
-            <button onclick="logout()">Logout</button>
-        </div>
 
         <!-- Login Section -->
         <div id="login-section">
@@ -45,32 +40,47 @@
             <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a>.</p>
             <p class="error" id="register-error"></p>
         </div>
+
+        <!-- Home Section -->
+        <div id="home-section" class="hidden">
+            <p id="welcome-message">Hello, <span id="username-display"></span>!</p>
+            <button onclick="logout()">Logout</button>
+
+            <!-- File Upload Section -->
+            <h3>Upload a File</h3>
+            <form id="upload-form" enctype="multipart/form-data" onsubmit="uploadFile(event)">
+                <input type="file" id="file-input" required><br><br>
+                <button type="submit">Upload</button>
+            </form>
+            <p class="error" id="upload-error"></p>
+
+            <!-- Chatbot Section -->
+            <h3>Chatbot</h3>
+            <div id="chat-output"></div>
+            <input type="text" id="chat-input" placeholder="Ask me anything..."><button onclick="sendMessage()">Send</button>
+        </div>
     </div>
 
     <script>
-        // Show Login and Hide Register Section
         function showLogin() {
             document.getElementById('login-section').classList.remove('hidden');
             document.getElementById('register-section').classList.add('hidden');
             document.getElementById('home-section').classList.add('hidden');
         }
 
-        // Show Register and Hide Login Section
         function showRegister() {
             document.getElementById('register-section').classList.remove('hidden');
             document.getElementById('login-section').classList.add('hidden');
             document.getElementById('home-section').classList.add('hidden');
         }
 
-        // Show Home Section after Login/Register
         function showHome(username) {
-            document.getElementById('welcome-message').innerText = "Hello, " + username + "!";
+            document.getElementById('username-display').innerText = username;
             document.getElementById('home-section').classList.remove('hidden');
             document.getElementById('login-section').classList.add('hidden');
             document.getElementById('register-section').classList.add('hidden');
         }
 
-        // Login function
         async function login(event) {
             event.preventDefault();
             const username = document.getElementById('login-username').value;
@@ -90,7 +100,6 @@
             }
         }
 
-        // Register function
         async function register(event) {
             event.preventDefault();
             const username = document.getElementById('register-username').value;
@@ -110,10 +119,41 @@
             }
         }
 
-        // Logout function
         async function logout() {
             await fetch('/logout', { method: 'POST' });
             showLogin();
+        }
+
+        async function uploadFile(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('file-input');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+            if (result.error) {
+                document.getElementById('upload-error').innerText = result.error;
+            } else {
+                alert("File uploaded and text extracted!");
+            }
+        }
+
+        async function sendMessage() {
+            const userInput = document.getElementById('chat-input').value;
+            const response = await fetch('/get_response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ msg: userInput })
+            });
+
+            const result = await response.text();
+            const chatOutput = document.getElementById('chat-output');
+            chatOutput.innerHTML += `<p><b>You:</b> ${userInput}</p><p><b>Bot:</b> ${result}</p>`;
         }
     </script>
 </body>
