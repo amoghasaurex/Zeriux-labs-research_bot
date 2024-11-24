@@ -4,18 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batman Chatbot</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 20px; }
-        .hidden { display: none; }
-        .container { max-width: 600px; margin: auto; }
-        .error { color: red; }
-        #chat-output { max-height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
-    </style>
+    <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1> BATMAN </h1>
-
+        <h1>BATMAN</h1>
 
         <!-- Login Section -->
         <div id="login-section">
@@ -25,7 +18,7 @@
                 <input type="password" id="login-password" placeholder="Password" required><br><br>
                 <button type="submit">Login</button>
             </form>
-            <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a>.</p>
+            <p>Don't have an account? <a id="register-link" href="#">Register here</a>.</p>
             <p class="error" id="login-error"></p>
         </div>
 
@@ -37,7 +30,7 @@
                 <input type="password" id="register-password" placeholder="Password" required><br><br>
                 <button type="submit">Register</button>
             </form>
-            <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a>.</p>
+            <p>Already have an account? <a id="login-link" href="#">Login here</a>.</p>
             <p class="error" id="register-error"></p>
         </div>
 
@@ -57,104 +50,11 @@
             <!-- Chatbot Section -->
             <h3>Chatbot</h3>
             <div id="chat-output"></div>
-            <input type="text" id="chat-input" placeholder="Ask me anything..."><button onclick="sendMessage()">Send</button>
+            <input type="text" id="chat-input" placeholder="Ask me anything about the file...">
+            <button onclick="sendMessage()">Send</button>
         </div>
     </div>
 
-    <script>
-        function showLogin() {
-            document.getElementById('login-section').classList.remove('hidden');
-            document.getElementById('register-section').classList.add('hidden');
-            document.getElementById('home-section').classList.add('hidden');
-        }
-
-        function showRegister() {
-            document.getElementById('register-section').classList.remove('hidden');
-            document.getElementById('login-section').classList.add('hidden');
-            document.getElementById('home-section').classList.add('hidden');
-        }
-
-        function showHome(username) {
-            document.getElementById('username-display').innerText = username;
-            document.getElementById('home-section').classList.remove('hidden');
-            document.getElementById('login-section').classList.add('hidden');
-            document.getElementById('register-section').classList.add('hidden');
-        }
-
-        async function login(event) {
-            event.preventDefault();
-            const username = document.getElementById('login-username').value;
-            const password = document.getElementById('login-password').value;
-
-            const response = await fetch('/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password })
-            });
-
-            const result = await response.json();
-            if (result.success) {
-                showHome(username);
-            } else {
-                document.getElementById('login-error').innerText = result.error;
-            }
-        }
-
-        async function register(event) {
-            event.preventDefault();
-            const username = document.getElementById('register-username').value;
-            const password = document.getElementById('register-password').value;
-
-            const response = await fetch('/register', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password })
-            });
-
-            const result = await response.json();
-            if (result.success) {
-                showHome(username);
-            } else {
-                document.getElementById('register-error').innerText = result.error;
-            }
-        }
-
-        async function logout() {
-            await fetch('/logout', { method: 'POST' });
-            showLogin();
-        }
-
-        async function uploadFile(event) {
-            event.preventDefault();
-            const fileInput = document.getElementById('file-input');
-            const formData = new FormData();
-            formData.append('file', fileInput.files[0]);
-
-            const response = await fetch('/upload', {
-                method: 'POST',
-                body: formData
-            });
-
-            const result = await response.json();
-            if (result.error) {
-                document.getElementById('upload-error').innerText = result.error;
-            } else {
-                alert("File uploaded and text extracted!");
-            }
-        }
-
-        async function sendMessage() {
-            const userInput = document.getElementById('chat-input').value;
-            const response = await fetch('/get_response', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ msg: userInput })
-            });
-
-            const result = await response.text();
-            const chatOutput = document.getElementById('chat-output');
-            chatOutput.innerHTML += `<p><b>You:</b> ${userInput}</p><p><b>Bot:</b> ${result}</p>`;
-        }
-    </script>
+    <script src="static/scripts.js"></script>
 </body>
 </html>
