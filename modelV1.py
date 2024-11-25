@@ -1,6 +1,6 @@
 import os
 import string
-from flask import Flask, render_template, redirect, url_for, request, jsonify, flash, session
+from flask import Flask, render_template, redirect, url_for, request, jsonify, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -45,6 +45,9 @@ with app.app_context():
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+# Global dictionaries to store TF-IDF Vectorizer, Matrix, and tokenized sentences for each user
+user_data = {}
+
 # Helper function to check allowed file types
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -68,44 +71,6 @@ def LemTokens(tokens):
 def LemNormalize(text):
     remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
-
-# Generate chatbot response
-def response(user_response, sent_tokens):
-    robo_response = ''
-    sent_tokens.append(user_response)
-    
-    # Check if there are meaningful tokens in sent_tokens
-    meaningful_tokens = [token for token in sent_tokens if token.strip() not in stop_words]
-    if not meaningful_tokens:
-        return "I'm here to chat, but I need more input from you!"
-    
-    # Create TF-IDF Vectorizer and fit to tokens
-    TfidVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
-    
-    try:
-        tfidf = TfidVec.fit_transform(sent_tokens)
-    except ValueError:
-        # Handle empty vocabulary (when only stop words are provided)
-        return "I didn't quite understand that. Can you say it differently?"
-
-    # Compute similarity values
-    vals = cosine_similarity(tfidf[-1], tfidf)
-    flat = vals.flatten()
-    sorted_vals = flat.argsort()
-    
-    # Select the second-to-last highest similarity score (the best match, ignoring the query itself)
-    req_tfidf = sorted_vals[-2] if len(sorted_vals) > 1 else sorted_vals[0]
-    
-    # Check if a relevant response is found
-    if flat[req_tfidf] == 0:
-        robo_response = "I'm not sure how to respond to that."
-    else:
-        robo_response = sent_tokens[req_tfidf]
-    
-    # Remove user response from tokens
-    sent_tokens.remove(user_response)
-    
-    return robo_response
 
 # Routes
 @app.route('/')
@@ -169,19 +134,52 @@ def upload_file():
         extracted_text = extract_text_from_file(file_path)
         sent_tokens = nltk.sent_tokenize(extracted_text)
         
-        return jsonify({"tokens": sent_tokens})
+        # Initialize and fit TF-IDF Vectorizer
+        tfidf_vectorizer = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
+        tfidf_matrix = tfidf_vectorizer.fit_transform(sent_tokens)
+        
+        # Store user's data in the global dictionary
+        user_data[current_user.id] = {
+            'sent_tokens': sent_tokens,
+            'tfidf_vectorizer': tfidf_vectorizer,
+            'tfidf_matrix': tfidf_matrix
+        }
+        
+        return jsonify({"success": True})
     return jsonify({"error": "Invalid file type. Please upload a .pdf or .txt file."})
 
-# Chatbot response route
+# Generate chatbot response
 @app.route("/get_response", methods=["POST"])
 @login_required
 def get_response():
     data = request.get_json()
     user_input = data['msg']
-    sent_tokens = data.get('tokens', [])
     
-    chatbot_response = response(user_input, sent_tokens)
-    return jsonify({"response": chatbot_response})
+    # Retrieve user's data
+    user_info = user_data.get(current_user.id)
+    
+    if user_info:
+        tfidf_vectorizer = user_info['tfidf_vectorizer']
+        tfidf_matrix = user_info['tfidf_matrix']
+        sent_tokens = user_info['sent_tokens']
+        
+        # Transform user input using the existing vectorizer
+        user_tfidf = tfidf_vectorizer.transform([user_input])
+        
+        # Compute cosine similarity with the precomputed matrix
+        cosine_vals = cosine_similarity(user_tfidf, tfidf_matrix).flatten()
+        sorted_indices = cosine_vals.argsort()
+        
+        # Get the best match based on cosine similarity
+        response_index = sorted_indices[-1] if len(sorted_indices) > 1 else -1
+        
+        # If there's no match, return a generic response
+        if cosine_vals[response_index] == 0:
+            return jsonify({"response": "I'm not sure how to respond to that."})
+        else:
+            return jsonify({"response": sent_tokens[response_index]})
+    
+    return jsonify({"response": "Error: Model not initialized. Please upload a document first."})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
