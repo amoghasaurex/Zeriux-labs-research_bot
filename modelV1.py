@@ -141,7 +141,7 @@ def upload_file():
         # Store user's data in the global dictionary
         user_data[current_user.id] = {
             'sent_tokens': sent_tokens,
-            'tfidf_vectorizer': tfidf_vectorizer,dd
+            'tfidf_vectorizer': tfidf_vectorizer,
             'tfidf_matrix': tfidf_matrix
         }
         
