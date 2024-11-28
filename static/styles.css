@@ -1,5 +1,6 @@
 /* static/styles.css */
 
+/* General Reset and Styling */
 * {
     margin: 0;
     padding: 0;
@@ -8,21 +9,21 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #49045e 0%, #480a64 100%); /* Gradient background */
+    background-color: #000000; /* Changed background to black */
 }
 
 .container {
     max-width: 500px;
-    background-color: #000000;
+    background-color: #000000; /* Retain the container's black color */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for a 3D effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
     text-align: center;
 }
 
@@ -37,25 +38,24 @@ h2 {
     font-size: 24px;
 }
 
-
-
-
+/* Button Styling */
 button {
-    background-color: #9200be;
+    background-color: #800080; /* Purple button */
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2); /* Soft shadow */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(128, 0, 128, 0.3); /* Button shadow */
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #8c00dd;
+    background-color: #6a0d75; /* Darker shade for hover */
 }
 
+/* Input field styling */
 input[type="text"],
 input[type="password"],
 input[type="file"] {
@@ -71,26 +71,29 @@ input[type="file"] {
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="file"]:focus {
-    border-color: #3498db; /* Highlighted border on focus */
+    border-color: #800080; /* Highlighted border on focus */
     outline: none;
 }
 
+/* Error messages */
 .error {
     color: red;
     font-size: 14px;
 }
 
+/* Hidden elements */
 .hidden {
     display: none;
 }
 
+/* Chat output box */
 #chat-output {
     max-height: 200px;
     overflow-y: auto;
     border: 1px solid #ddd;
     padding: 10px;
     margin-top: 10px;
-    background-color: #f9f9f9;
+    background-color: #1a1a1a;
     text-align: left;
 }
 
@@ -99,11 +102,12 @@ input[type="file"]:focus {
 }
 
 #chat-output p b {
-    color: #333;
+    color: #fffdfd;
 }
 
+/* Anchor styling */
 a {
-    color: #3498db;
+    color: #ffffff; /* Changed to white */
     cursor: pointer;
 }
 

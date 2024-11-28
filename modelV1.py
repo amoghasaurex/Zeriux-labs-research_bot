@@ -9,6 +9,7 @@ import PyPDF2
 from werkzeug.utils import secure_filename
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import re
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -117,6 +118,19 @@ def logout():
     logout_user()
     return jsonify({"success": True})
 
+def clean_and_tokenize(sentences):
+    """Clean and tokenize the document's sentences."""
+    cleaned_sentences = []
+    for sentence in sentences:
+        # Remove page numbers, notes, or references in square brackets
+        sentence = re.sub(r'\[.*?\]|\d{1,2}:\d{2}|\\n|\\t|\\r', '', sentence)
+        # Strip excess spaces and keep relevant content
+        cleaned_sentence = sentence.strip()
+        if cleaned_sentence:
+            cleaned_sentences.append(cleaned_sentence)
+    return cleaned_sentences
+
+
 # File upload route
 @app.route("/upload", methods=["POST"])
 @login_required
@@ -134,8 +148,15 @@ def upload_file():
         extracted_text = extract_text_from_file(file_path)
         sent_tokens = nltk.sent_tokenize(extracted_text)
         
-        # Initialize and fit TF-IDF Vectorizer
-        tfidf_vectorizer = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
+        # Clean and preprocess sentences
+        sent_tokens = clean_and_tokenize(sent_tokens)
+        
+        # Initialize and fit enhanced TF-IDF Vectorizer
+        tfidf_vectorizer = TfidfVectorizer(
+            tokenizer=LemNormalize, 
+            stop_words='english',
+            ngram_range=(1, 3),  # Bigram and trigram support
+        )
         tfidf_matrix = tfidf_vectorizer.fit_transform(sent_tokens)
         
         # Store user's data in the global dictionary
@@ -148,12 +169,11 @@ def upload_file():
         return jsonify({"success": True})
     return jsonify({"error": "Invalid file type. Please upload a .pdf or .txt file."})
 
-# Generate chatbot response
 @app.route("/get_response", methods=["POST"])
 @login_required
 def get_response():
     data = request.get_json()
-    user_input = data['msg']
+    user_input = data['msg'].strip().lower()
     
     # Retrieve user's data
     user_info = user_data.get(current_user.id)
@@ -163,21 +183,26 @@ def get_response():
         tfidf_matrix = user_info['tfidf_matrix']
         sent_tokens = user_info['sent_tokens']
         
-        # Transform user input using the existing vectorizer
-        user_tfidf = tfidf_vectorizer.transform([user_input])
+        # Preprocess user input for context keywords
+        key_context_words = ["who", "what", "list", "companies", "founder"]
+        input_weight = 2 if any(word in user_input for word in key_context_words) else 1
+        user_tfidf = tfidf_vectorizer.transform([user_input]) * input_weight
         
         # Compute cosine similarity with the precomputed matrix
         cosine_vals = cosine_similarity(user_tfidf, tfidf_matrix).flatten()
-        sorted_indices = cosine_vals.argsort()
+        sorted_indices = cosine_vals.argsort()[::-1]  # Descending order
         
-        # Get the best match based on cosine similarity
-        response_index = sorted_indices[-1] if len(sorted_indices) > 1 else -1
+        # Filter results above the threshold
+        confidence_threshold = 0.25  # Boosted for context relevance
+        valid_indices = [idx for idx in sorted_indices if cosine_vals[idx] > confidence_threshold]
         
-        # If there's no match, return a generic response
-        if cosine_vals[response_index] == 0:
-            return jsonify({"response": "I'm not sure how to respond to that."})
+        if valid_indices:
+            # Aggregate top responses into one coherent reply
+            top_sentences = [sent_tokens[idx] for idx in valid_indices[:3]]
+            response = " ".join(top_sentences).strip()
+            return jsonify({"response": response})
         else:
-            return jsonify({"response": sent_tokens[response_index]})
+            return jsonify({"response": "I couldn't find a clear answer. Could you rephrase or provide more context?"})
     
     return jsonify({"response": "Error: Model not initialized. Please upload a document first."})
 
