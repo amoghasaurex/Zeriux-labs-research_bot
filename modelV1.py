@@ -6,10 +6,14 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from werkzeug.security import generate_password_hash, check_password_hash
 import nltk
 import PyPDF2
+import openai
+from config import API
 from werkzeug.utils import secure_filename
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import re
+
+openai.api_key = API
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -169,6 +173,7 @@ def upload_file():
         return jsonify({"success": True})
     return jsonify({"error": "Invalid file type. Please upload a .pdf or .txt file."})
 
+
 @app.route("/get_response", methods=["POST"])
 @login_required
 def get_response():
@@ -179,32 +184,31 @@ def get_response():
     user_info = user_data.get(current_user.id)
     
     if user_info:
-        tfidf_vectorizer = user_info['tfidf_vectorizer']
-        tfidf_matrix = user_info['tfidf_matrix']
         sent_tokens = user_info['sent_tokens']
+        document_context = " ".join(sent_tokens)[:3000]  # Limit to ~3000 characters for prompt
         
-        # Preprocess user input for context keywords
-        key_context_words = ["who", "what", "list", "companies", "founder"]
-        input_weight = 2 if any(word in user_input for word in key_context_words) else 1
-        user_tfidf = tfidf_vectorizer.transform([user_input]) * input_weight
+        # Construct the messages for OpenAI API
+        messages = [
+            {"role": "system", "content": "You are a helpful assistant. Use the provided document context to answer the user's questions accurately."},
+            {"role": "assistant", "content": f"The document context is: {document_context}"},
+            {"role": "user", "content": user_input},
+        ]
         
-        # Compute cosine similarity with the precomputed matrix
-        cosine_vals = cosine_similarity(user_tfidf, tfidf_matrix).flatten()
-        sorted_indices = cosine_vals.argsort()[::-1]  # Descending order
-        
-        # Filter results above the threshold
-        confidence_threshold = 0.25  # Boosted for context relevance
-        valid_indices = [idx for idx in sorted_indices if cosine_vals[idx] > confidence_threshold]
-        
-        if valid_indices:
-            # Aggregate top responses into one coherent reply
-            top_sentences = [sent_tokens[idx] for idx in valid_indices[:3]]
-            response = " ".join(top_sentences).strip()
-            return jsonify({"response": response})
-        else:
-            return jsonify({"response": "I couldn't find a clear answer. Could you rephrase or provide more context?"})
+        # Call OpenAI API
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",  # Updated model
+                messages=messages,
+                max_tokens=200,  # Adjust token limit
+                temperature=0.7,  # Adjust creativity level
+            )
+            generated_response = response['choices'][0]['message']['content'].strip()
+            return jsonify({"response": generated_response})
+        except Exception as e:
+            return jsonify({"response": f"Error with OpenAI API: {str(e)}"})
     
     return jsonify({"response": "Error: Model not initialized. Please upload a document first."})
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
