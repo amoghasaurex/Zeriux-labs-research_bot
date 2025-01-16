@@ -6,14 +6,13 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from werkzeug.security import generate_password_hash, check_password_hash
 import nltk
 import PyPDF2
-import openai
+import requests
 from config import API
 from werkzeug.utils import secure_filename
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import re
 
-openai.api_key = API
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -187,25 +186,35 @@ def get_response():
         sent_tokens = user_info['sent_tokens']
         document_context = " ".join(sent_tokens)[:3000]  # Limit to ~3000 characters for prompt
         
-        # Construct the messages for OpenAI API
+        # Construct the messages for OpenRouter API
         messages = [
             {"role": "system", "content": "You are a helpful assistant. Use the provided document context to answer the user's questions accurately."},
             {"role": "assistant", "content": f"The document context is: {document_context}"},
             {"role": "user", "content": user_input},
         ]
         
-        # Call OpenAI API
+        # OpenRouter API endpoint and key
+        openrouter_url = "https://api.openrouter.ai/v1/chat/completions"  # Replace with the actual OpenRouter URL
+        openrouter_api_key = API  # Ensure your OpenRouter API key is stored in config.py
+        
+        # Make the request to OpenRouter
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",  # Updated model
-                messages=messages,
-                max_tokens=200,  # Adjust token limit
-                temperature=0.7,  # Adjust creativity level
-            )
-            generated_response = response['choices'][0]['message']['content'].strip()
+            headers = {
+                "Authorization": f"Bearer {openrouter_api_key}",
+                "Content-Type": "application/json",
+            }
+            payload = {
+                "model": "meta-llama/llama-3.2-3b-instruct:free",  # Specify the OpenRouter model
+                "messages": messages,
+                "max_tokens": 200,  # Adjust token limit
+                "temperature": 0.7,  # Adjust creativity level
+            }
+            response = requests.post(openrouter_url, headers=headers, json=payload)
+            response.raise_for_status()  # Raise an error for non-200 status codes
+            generated_response = response.json()['choices'][0]['message']['content'].strip()
             return jsonify({"response": generated_response})
-        except Exception as e:
-            return jsonify({"response": f"Error with OpenAI API: {str(e)}"})
+        except requests.exceptions.RequestException as e:
+            return jsonify({"response": f"Error with OpenRouter API: {str(e)}"})
     
     return jsonify({"response": "Error: Model not initialized. Please upload a document first."})
 
