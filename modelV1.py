@@ -7,7 +7,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import nltk
 import PyPDF2
 import requests
-from config import API
 from werkzeug.utils import secure_filename
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -173,6 +172,7 @@ def upload_file():
     return jsonify({"error": "Invalid file type. Please upload a .pdf or .txt file."})
 
 
+# Update to clean brackets and quotes in the OpenRouter response
 @app.route("/get_response", methods=["POST"])
 @login_required
 def get_response():
@@ -195,9 +195,8 @@ def get_response():
         
         # OpenRouter API endpoint and key
         openrouter_url = "https://openrouter.ai/api/v1/chat/completions"  # Replace with the actual OpenRouter URL
-        openrouter_api_key = API  # Ensure your OpenRouter API key is stored in config.py
+        openrouter_api_key = "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"
         
-        # Make the request to OpenRouter
         try:
             headers = {
                 "Authorization": f"Bearer {openrouter_api_key}",
@@ -211,8 +210,13 @@ def get_response():
             }
             response = requests.post(openrouter_url, headers=headers, json=payload)
             response.raise_for_status()  # Raise an error for non-200 status codes
-            generated_response = response.json()['choices'][0]['message']['content'].strip()
-            return jsonify({"response": generated_response})
+            
+            # Process and clean the response
+            raw_response = response.json()['choices'][0]['message']['content'].strip()
+            # Remove unwanted symbols like brackets and quotes
+            cleaned_response = re.sub(r'[{}"\[\]]', '', raw_response)
+            
+            return jsonify({"response": cleaned_response})
         except requests.exceptions.RequestException as e:
             return jsonify({"response": f"Error with OpenRouter API: {str(e)}"})
     
