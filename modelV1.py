@@ -194,7 +194,7 @@ def get_response():
         ]
         
         # OpenRouter API endpoint and key
-        openrouter_url = "https://api.openrouter.ai/v1/chat/completions"  # Replace with the actual OpenRouter URL
+        openrouter_url = "https://openrouter.ai/api/v1/chat/completions"  # Replace with the actual OpenRouter URL
         openrouter_api_key = API  # Ensure your OpenRouter API key is stored in config.py
         
         # Make the request to OpenRouter
