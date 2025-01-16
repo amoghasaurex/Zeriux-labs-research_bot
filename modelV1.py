@@ -6,9 +6,12 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from werkzeug.security import generate_password_hash, check_password_hash
 import nltk
 import PyPDF2
+import requests
 from werkzeug.utils import secure_filename
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import re
+
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -16,7 +19,7 @@ app.config['SECRET_KEY'] = 'supersecretkey'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB limit
+app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024  # 1GB limit
 ALLOWED_EXTENSIONS = {'pdf', 'txt'}
 
 # Initialize SQLAlchemy and LoginManager
@@ -117,6 +120,19 @@ def logout():
     logout_user()
     return jsonify({"success": True})
 
+def clean_and_tokenize(sentences):
+    """Clean and tokenize the document's sentences."""
+    cleaned_sentences = []
+    for sentence in sentences:
+        # Remove page numbers, notes, or references in square brackets
+        sentence = re.sub(r'\[.*?\]|\d{1,2}:\d{2}|\\n|\\t|\\r', '', sentence)
+        # Strip excess spaces and keep relevant content
+        cleaned_sentence = sentence.strip()
+        if cleaned_sentence:
+            cleaned_sentences.append(cleaned_sentence)
+    return cleaned_sentences
+
+
 # File upload route
 @app.route("/upload", methods=["POST"])
 @login_required
@@ -134,8 +150,15 @@ def upload_file():
         extracted_text = extract_text_from_file(file_path)
         sent_tokens = nltk.sent_tokenize(extracted_text)
         
-        # Initialize and fit TF-IDF Vectorizer
-        tfidf_vectorizer = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
+        # Clean and preprocess sentences
+        sent_tokens = clean_and_tokenize(sent_tokens)
+        
+        # Initialize and fit enhanced TF-IDF Vectorizer
+        tfidf_vectorizer = TfidfVectorizer(
+            tokenizer=LemNormalize, 
+            stop_words='english',
+            ngram_range=(1, 3),  # Bigram and trigram support
+        )
         tfidf_matrix = tfidf_vectorizer.fit_transform(sent_tokens)
         
         # Store user's data in the global dictionary
@@ -148,38 +171,57 @@ def upload_file():
         return jsonify({"success": True})
     return jsonify({"error": "Invalid file type. Please upload a .pdf or .txt file."})
 
-# Generate chatbot response
+
+# Update to clean brackets and quotes in the OpenRouter response
 @app.route("/get_response", methods=["POST"])
 @login_required
 def get_response():
     data = request.get_json()
-    user_input = data['msg']
+    user_input = data['msg'].strip().lower()
     
     # Retrieve user's data
     user_info = user_data.get(current_user.id)
     
     if user_info:
-        tfidf_vectorizer = user_info['tfidf_vectorizer']
-        tfidf_matrix = user_info['tfidf_matrix']
         sent_tokens = user_info['sent_tokens']
+        document_context = " ".join(sent_tokens)[:3000]  # Limit to ~3000 characters for prompt
         
-        # Transform user input using the existing vectorizer
-        user_tfidf = tfidf_vectorizer.transform([user_input])
+        # Construct the messages for OpenRouter API
+        messages = [
+            {"role": "system", "content": "You are a helpful assistant. Use the provided document context to answer the user's questions accurately."},
+            {"role": "assistant", "content": f"The document context is: {document_context}"},
+            {"role": "user", "content": user_input},
+        ]
         
-        # Compute cosine similarity with the precomputed matrix
-        cosine_vals = cosine_similarity(user_tfidf, tfidf_matrix).flatten()
-        sorted_indices = cosine_vals.argsort()
+        # OpenRouter API endpoint and key
+        openrouter_url = "https://openrouter.ai/api/v1/chat/completions"  # Replace with the actual OpenRouter URL
+        openrouter_api_key = "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"
         
-        # Get the best match based on cosine similarity
-        response_index = sorted_indices[-1] if len(sorted_indices) > 1 else -1
-        
-        # If there's no match, return a generic response
-        if cosine_vals[response_index] == 0:
-            return jsonify({"response": "I'm not sure how to respond to that."})
-        else:
-            return jsonify({"response": sent_tokens[response_index]})
+        try:
+            headers = {
+                "Authorization": f"Bearer {openrouter_api_key}",
+                "Content-Type": "application/json",
+            }
+            payload = {
+                "model": "meta-llama/llama-3.2-3b-instruct:free",  # Specify the OpenRouter model
+                "messages": messages,
+                "max_tokens": 200,  # Adjust token limit
+                "temperature": 0.7,  # Adjust creativity level
+            }
+            response = requests.post(openrouter_url, headers=headers, json=payload)
+            response.raise_for_status()  # Raise an error for non-200 status codes
+            
+            # Process and clean the response
+            raw_response = response.json()['choices'][0]['message']['content'].strip()
+            # Remove unwanted symbols like brackets and quotes
+            cleaned_response = re.sub(r'[{}"\[\]]', '', raw_response)
+            
+            return jsonify({"response": cleaned_response})
+        except requests.exceptions.RequestException as e:
+            return jsonify({"response": f"Error with OpenRouter API: {str(e)}"})
     
     return jsonify({"response": "Error: Model not initialized. Please upload a document first."})
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

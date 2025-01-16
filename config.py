@@ -1,0 +1,2 @@
+# config.py
+API = "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"
